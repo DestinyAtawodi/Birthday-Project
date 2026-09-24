@@ -1,0 +1,415 @@
+body{
+   background: linear-gradient(300deg,  violet,  rgb(238, 107, 129), purple);
+  background-size: 180% 180%;
+  animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.card{
+    margin:3%;
+    padding: 5%;
+    -webkit-animation: cardAnimation 1.5s ease-in-out;
+}
+
+
+
+#svgg {
+  width: 20%;
+}
+
+p{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.cardauto{
+  border-radius: 5%;
+  width: 100%;
+ 
+  -webkit-animation: 15s  infinite cardimg;
+  background-image: url(./assets:images/mg4.jpg);
+  background-size: cover;
+  height: 60vh;
+}
+
+
+
+@-webkit-keyframes cardimg {
+  20% {
+     background-image: url(./assets:images/mg4.jpg);
+       background-size: cover;
+  }
+  50% {
+     background-image: url(./assets:images/mg5.jpg);
+       background-size: cover;
+  }
+  100% {
+    background-image: url(./assets:images/mg2.jpg);
+      background-size: cover;
+  }
+}
+
+.section{
+ 
+  background-color: black;
+  padding: 10%;
+  margin-top: 40%;
+}
+
+
+.grid > img {
+      border-radius: 5%;
+      height: auto;
+     }
+
+
+.grid > video {
+      border-radius: 5%;
+      height: auto;
+     }
+
+
+
+
+.section-b {
+  margin-top: 20%;
+}
+
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(253, 214, 220);
+}
+
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.carousel-card {
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.carousel-card img {
+  width: 50%;
+  margin: 25%;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-card p {
+  color: rgb(253, 214, 220);
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  border: none;
+  padding: 15px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Dots Navigation */
+.carousel-dots {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: rgb(253, 214, 220);
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*  RESPONSIVE DESIGN */
+
+/* Extra large screens (1200px and above) */
+ @media (min-width: 1200px) {
+  .cardauto {
+     height: 70vh;
+      width: 30%;
+      margin: 35%;
+  }
+ }
+
+/* Large screens (1200px and below) */
+@media (max-width: 1200px) {
+  .cardauto {
+     height: 70vh;
+      width: 30%;
+      margin: 35%;
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .carousel-container {
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  .carousel-card img {
+    height: 350px;
+  }
+
+  .carousel-card p {
+    font-size: 16px;
+  }
+
+  .carousel-btn {
+    padding: 12px 16px;
+    font-size: 20px;
+  }
+
+  .carousel-btn.prev {
+    left: 15px;
+  }
+
+  .carousel-btn.next {
+    right: 15px;
+  }
+
+  .cardauto {
+    height: 100vh;
+     width: 50%;
+     margin: 25%;
+  }
+}
+
+/* Mobile Landscape & Small Tablets (600px - 768px) */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 15px;
+    margin: 25px auto;
+  }
+
+  .carousel-card img {
+    height: 300px;
+  }
+
+  .carousel-card p {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .carousel-btn {
+    padding: 10px 14px;
+    font-size: 18px;
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .carousel-dots {
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .cardauto {
+    height: 90vh;
+    width: 80%;
+    margin: 10%;
+  
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+   
+
+  .carousel-container {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .carousel {
+    gap: 15px;
+  }
+
+  .carousel-card img {
+    height: 250px;
+  }
+
+  .carousel-card p {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .carousel-btn {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .carousel-btn.prev {
+    left: 5px;
+  }
+
+  .carousel-btn.next {
+    right: 5px;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .carousel-dots {
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .cardauto {
+    height: 80vh;
+    width: 80%;
+    margin: 10%;
+    
+  }
+}
+
+/* Small Mobile Devices (320px - 480px) */
+@media (max-width: 480px) {
+     
+  .carousel-container {
+    padding: 8px;
+    margin: 15px auto;
+  }
+
+  .carousel {
+    gap: 10px;
+  }
+
+  .carousel-card img {
+    height: 200px;
+  }
+
+  .carousel-card p {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .carousel-btn {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .carousel-btn.prev {
+    left: 2px;
+  }
+
+  .carousel-btn.next {
+    right: 2px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .carousel-dots {
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .cardauto {
+    height: 60vh;
+    width: 80%;
+    margin: 10%;
+  }
+
+  .grid > img {
+      margin: 10%;
+      width: 80%;
+  }
+
+  .grid > video {
+        margin: 10%;
+       width: 80%;
+  }
+}

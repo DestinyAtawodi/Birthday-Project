@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niya's Birthday</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="card bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg p-8 shadow-lg text-center">
+
+        <img src = "./assets:images/birthday-cake-2-svgrepo-com.svg" id="svgg"/>
+              <div id="countdown" class="text-white text-center mt-8">
+                  <h2 class="text-2xl font-bold">Countdown to Niya's Birthday</h2>
+                 <div id="timer" class="text-xl mt-4"></div>
+              </div>
+                 <div class="cardauto"></div>
+                   <p class="text-lg text-white">Wishing you a day filled with love, laughter, and unforgettable moments. May all your dreams come true!</p>
+                        
+    </div>
+
+
+      <div class="section">
+        
+        <h2 class="text-2xl font-bold text-white mb-4">Gallery</h2>
+           <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+              <img src="./assets:images/mg3.jpg"/>
+              <video autoplay loop muted playsinline>
+                <source src="./assets:images/655820383_25911689525170359_9195019709551509711_n.mp4" type="video/mp4">
+              </video>
+              <img src="./assets:images/mg1.jpg"/>
+              <img src="./assets:images/mg7.jpg"/>
+              <video autoplay loop muted playsinline>
+                  <source src="./assets:images/657677442_27132399593014265_4187507366088202463_n.mp4" type="video/mp4">
+              </video>
+           </div>
+        
+      </div>
+
+
+      <div class="section-b">
+              <h2 class="text-2xl font-bold">Memories</h2>
+              
+              <div class="carousel-container">
+                <div class="carousel">
+                  <div class="carousel-card">
+                    <img src="./assets:images/mm2.jpg" alt="Memory 1" />
+                    <p>First moment together</p>
+                  </div>
+                  <div class="carousel-card">
+                    <img src="./assets:images/mm1.jpg" alt="Memory 2" />
+                    <p>Beautiful memories</p>
+                  </div>
+                  <div class="carousel-card">
+                    <img src="./assets:images/mm3.jpg" alt="Memory 3" />
+                    <p>Unforgettable times</p>
+                  </div>
+                  <div class="carousel-card">
+                    <img src="./assets:images/mm4.jpg" alt="Memory 4" />
+                    <p>Precious moments</p>
+                  </div>
+                  <div class="carousel-card">
+                    <img src="./assets:images/mg5.jpg" alt="Memory 5" />
+                    <p>Cherished memories</p>
+                  </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-btn prev" id="prevBtn">❮</button>
+                <button class="carousel-btn next" id="nextBtn">❯</button>
+
+                <!-- Dots for navigation -->
+                <div class="carousel-dots" id="dotsContainer"></div>
+              </div>
+             
+      </div>
+
+  
+    <script src="index.js"></script>
+</body>
+</html>
